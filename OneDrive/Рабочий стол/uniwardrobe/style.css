@@ -1,0 +1,135 @@
+body {
+    background-color: #000000; /* Черный фон */
+    color: #FFFFFF; /* Белый текст */
+    font-family: Arial, sans-serif; /* Современный шрифт */
+}
+
+header {
+    background-color: #000000; /* Черный фон */
+    text-align: center; /* Центрирование логотипа */
+    padding: 20px;
+}
+
+nav {
+    background-color: #000000; /* Черный фон */
+    text-align: center; /* Центрирование ссылок */
+    padding: 20px;
+}
+
+nav a {
+    color: #FFFF00; /* Желтые ссылки */
+    margin: 0 10px; /* Отступы между ссылками */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+nav a:hover {
+    color: #FFFFFF; /* Белый цвет при наведении */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #000000; /* Черный фон */
+    color: #FFFFFF; /* Белый текст */
+    text-align: center; /* Центрирование текста */
+    padding: 20px;
+}
+header img {
+    width: 100px; /* Установите ширину, которая вам подходит */
+    height: auto; /* Это сохранит пропорции изображения */
+}
+.img {
+height: 200px;
+width: 500;
+}
+.logo {
+height: 150px;
+width: 150px;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    margin: 10px;
+    text-align: center;
+}
+.product-item img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item img:hover {
+    transform: scale(1.2);
+}
+footer {
+    background-color: #092c08; /* Черный фон */
+    color: #FFFFFF; /* Белый текст */
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+footer h3 {
+    color: #FFFF00; /* Желтый цвет заголовков */
+}
+
+footer p {
+    margin: 0; /* Убрать отступы у абзацев */
+}#searchForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#searchForm input[type="text"] {
+    width: 200px;
+    padding: 5px;
+}
+
+#searchForm button {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+#gap {
+    font-family: 'Roboto', sans-serif; /* Выберите шрифт, который вам нравится */
+    font-size: 16px; /* Установите размер шрифта */
+    line-height: 1.5; /* Установите высоту строки */
+    color: #333; /* Установите цвет текста */
+    margin: 0 0 20px; /* Установите отступы */
+    text-align: justify; /* Выровняйте текст по ширине */
+}
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}

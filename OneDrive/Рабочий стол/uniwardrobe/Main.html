@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uniwardrobe.kg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="Логотип магазина"> <!-- Замените "logo.png" на путь к вашему логотипу -->
+    </header>
+    <nav>
+        <a href="jackets.html">Куртки</a>
+        <a href="hats.html">Шапки</a>
+        <a href="pants.html">Штаны</a>
+        <a href="hoodies.html">Худи</a>
+    </nav>
+    
+    <main>
+    <!-- Поисковая форма -->
+<form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Поиск товаров...">
+    <button type="submit">Поиск</button>
+</form>
+
+<!-- Список товаров -->
+<div id="productList">
+    <h2>Рекомендации</h2>
+    <div class="product-grid">
+        <div class="product-item">
+            <a href="1.jpg.jpg" target="_blank">
+                <img class="img" src="1.jpg.jpg" alt="Описание изображения 1"></a>
+                <a href="2.jpg.jpg" target="_blank">
+                    <img class="img" src="2.jpg.jpg" alt="Описание изображения 1"></a>
+                    <a href="3.jpg.jpg" target="_blank">
+                        <img class="img" src="3.jpg.jpg" alt="Описание изображения 1"></a>
+            <p>GAP</p>
+            <p id="gap">Худи GAP - это классический и универсальный выбор, который отражает стремление бренда создавать вечные вещи для повседневной носки³. Худи GAP отличается классическим и вечным дизайном³. Они идеально подходят для слоями одежды или отдыха, так как изготовлены из качественных материалов для долговечного комфорта¹². 
+
+                В GAP представлены худи различных стилей и цветов¹². Некоторые модели худи GAP включают в себя двухслойную конструкцию и изготовлены из 100% хлопка⁴. 
+                
+                Пожалуйста, обратите внимание, что информация может варьироваться в зависимости от конкретной модели худи GAP. Для получения наиболее точной информации рекомендуется посетить официальный сайт GAP или магазин розничной торговли¹².
+               </p>
+            <button>Добавить в корзину</button>
+        </div>
+        <!-- Добавьте больше продуктов по аналогии -->
+    </div>
+</div>
+
+<!-- Скрипт для поиска товаров -->
+<script>
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Предотвратить обновление страницы
+    var query = document.getElementById('searchInput').value; // Получить запрос пользователя
+    var products = document.getElementById('productList').children; // Получить список товаров
+    for (var i = 0; i < products.length; i++) {
+        var product = products[i];
+        var img = product.querySelector('img');
+        if (product.textContent.toLowerCase().includes(query.toLowerCase()) || img.alt.toLowerCase().includes(query.toLowerCase())) {
+            product.style.display = ''; // Показать товар, если он соответствует запросу
+        } else {
+            product.style.display = 'none'; // Скрыть товар, если он не соответствует запросу
+        }
+    }
+});
+</script>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <h3>Контакты</h3>
+            <p>Телефон: +996704080104</p>
+        </div>
+        <div class="social-media">
+            <h3>Социальные сети</h3>
+            <p><a href="https://www.instagram.com/uniwardrobe.kg" target="_blank">Instagram: uniwardrobe.kg</a></p>
+            <p><a href="https://www.tiktok.com/@uniwardrobe.kg" target="_blank">TikTok: uniwardrobe.kg</a></p>
+        </div>
+    </footer>
+</body>
+</html>
