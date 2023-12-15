@@ -200,3 +200,77 @@ button:hover {
             .item.open .hb {
                 display: block; /* Показать содержимое, когда у родительского элемента есть класс "open" */
             }
+            /* Общие стили для кнопок */
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50; /* Зеленоватый цвет в стиле "old money" */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Цвет при наведении */
+
+    /* Дополнительные стили для бордера при наведении (это можно убрать, если не нужно) */
+    border: 1px solid #45a049;
+}
+
+/* Стиль кнопки в хедере */
+header button {
+    background-color: #8FBC8F; /* Светло-зеленоватый цвет */
+    color: #000; /* Черный текст */
+}
+
+header button:hover {
+    background-color: #98FB98; /* Цвет при наведении */
+}
+
+/* Стиль логотипа */
+header .logo {
+    height: 100px; /* Уменьшим размер логотипа */
+    width: 100px;
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+main {
+    background-color: #000000; /* Темный фон для основного контента */
+    color: #fff;
+}
+
+footer {
+    background-color: #183b19; /* Зеленоватый цвет для футера */
+    color: #fff;
+}
+/* Обновленные стили для формы поиска */
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Выравниваем по вертикали */
+    margin-bottom: 20px;
+}
+
+#searchForm input[type="text"] {
+    width: 300px; /* Увеличенная ширина для лучшего ввода текста */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4CAF50; /* Зеленоватый цвет для рамки */
+}
+
+#searchForm button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4CAF50; /* Зеленоватый цвет для кнопки */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchForm button:hover {
+    background-color: #45a049; /* Цвет при наведении */
+}
