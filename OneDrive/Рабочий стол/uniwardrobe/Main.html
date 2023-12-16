@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Uniwardrobe.kg</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uniwardrobe.kg</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.7.9/awesomplete.min.js"></script>
+    </head>
+    
 <body>
     <header>
         <img class="logo" src="logo.png" alt="Логотип магазина"> <!-- Замените "logo.png" на путь к вашему логотипу -->
@@ -14,66 +20,115 @@
         <a href="pants.html">Штаны</a>
         <a href="hoodies.html">Худи</a>
     </nav>
-    
-    <main>
-    <!-- Поисковая форма -->
-<form id="searchForm">
-    <input type="text" id="searchInput" placeholder="Поиск товаров...">
-    <button type="submit">Поиск</button>
-</form>
+    <!-- Добавьте кнопки для переключения языка -->
+<button onclick="changeLanguage('ru')">RU</button>
+<button onclick="changeLanguage('en')">EN</button>
 
+    <main>
+        <!-- Секция "О нас" -->
+        <section id="about">
+            <div class="item">
+                <p class="number"></p>
+                <p class="text">О нас</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+                <div class="hb">
+                    <p>Добро пожаловать в Uniwardrobe.kg, ваш надежный источник модной одежды прямо из сердца Кыргызстана. Мы посвятили себя предоставлению вам самых качественных товаров, с акцентом на надежность, высокое качество и уникальность.</p>
+                    <p>Мы работаем каждый день, чтобы предложить вам самые стильные и качественные товары. Наша миссия - предоставить вам продукты, которые вас вдохновляют, делают вас счастливыми и, самое главное, чувствуете себя уверенно.</p>
+                    <p>Мы тщательно проверяем качество нашей одежды, работаем только с надежными поставщиками, чтобы вы могли получить лучший товар.</p>
+                    <p>Спасибо, что выбрали нас в своем путешествии по моде. Мы обещаем, что вы будете довольны нашими продуктами.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Поисковая форма -->
+        <form id="searchForm">
+            <input type="text" id="searchInput" class="awesomplete" list="productsList" placeholder="Поиск товаров...">
+            <button type="submit">Поиск</button>
+        </form>
+        <datalist id="productsList" class="awesomplete">
+            <!-- Здесь вы можете динамически добавлять элементы с использованием JavaScript -->
+        </datalist>
+                
+        <div id="cart">
+            <h2>Корзина</h2>
+            <div id="totalPrice">
+                <p>Общая сумма в корзине: <span id="cartTotalPrice">0</span> сомов</p>
+            </div>
+            <div id="cartItems"></div>
+            <button id="checkoutButton" onclick="checkout()">Оформить заказ</button>
+
+        </div>
+        
+        <!-- Список товаров -->
+        <!-- Список товаров -->
 <!-- Список товаров -->
-<div id="productList">
+<div id="productList" class="searchable-section">
     <h2>Рекомендации</h2>
     <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-initial-quantity="6" data-remaining-quantity="5">
+            <!-- Добавлено поле для отображения оставшегося количества -->
+            <p id="remainingQuantity">Осталось: 5 шт.</p>
             <a href="1.jpg.jpg" target="_blank">
                 <img class="img" src="1.jpg.jpg" alt="Описание изображения 1"></a>
-                <a href="2.jpg.jpg" target="_blank">
-                    <img class="img" src="2.jpg.jpg" alt="Описание изображения 1"></a>
-                    <a href="3.jpg.jpg" target="_blank">
-                        <img class="img" src="3.jpg.jpg" alt="Описание изображения 1"></a>
-            <p>GAP</p>
-            <p id="gap">Худи GAP - это классический и универсальный выбор, который отражает стремление бренда создавать вечные вещи для повседневной носки³. Худи GAP отличается классическим и вечным дизайном³. Они идеально подходят для слоями одежды или отдыха, так как изготовлены из качественных материалов для долговечного комфорта¹². 
+            <a href="2.jpg.jpg" target="_blank">
+                <img class="img" src="2.jpg.jpg" alt="Описание изображения 1"></a>
+            <a href="3.jpg.jpg" target="_blank">
+                <img class="img" src="3.jpg.jpg" alt="Описание изображения 1"></a>
+                <p>GAP: <span id="GAPPrice">2000</span> сомов</p>
+            <p id="gap">Xуди GAP - это классический и универсальный выбор. Еще несколько лет назад компания GAP терпела немыслимые убытки, но теперь модные худи и джинсы заполнили все улицы и сейчас уже трудно найти человека, который не знал бы об бренде GAP.Главные преимущества худи и зип-худи Gap
+                Качество материала. Худи и зип-худи Gap создаются из коттона и полиэстра, что делает их тёплыми и очень качественными. Вы можете быть уверены, что они прослужат вам хорошую службу на протяжении всего времени носки.
+                Лёгкость в уходе. Худи и зип-худи Gap не требуют чересчур трепетного ухода. Достаточно просто стирать их с периодичностью в пару недель на режиме быстрой стирки. Они при этом будут сохранять свой естественный цвет за счёт высокого качества материала.
+                Универсальность. Худи и зип-худи Gap хорошо выглядят практически в любой ситуации. Из-за спокойной расцветки они подойдут под повседневный и кэжуал-стиль, будут хорошо выглядеть на работе или учёбе, если там нет строго регламентированного дресс-кода. Зип-худи — это идеальное решение между ветровкой и обычным худи. Оно стильно выглядит, хорошо сшито и не слишком тёплое. 
+                Цены. Худи и зип-худи Gap в ценовом плане достаточно низки. В среднем они продаются в диапазоне от 2 до 3 тысяч рублей, где 3 тысячи рублей — за лучшую из моделей.
+                Количество вариаций. Худи и зип-худи Gap есть в любом размере и цветовой окраске. Вы точно сможете подобрать что-нибудь для себя!</p>
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+            
+            <!-- Добавлен выпадающий список для выбора цвета -->
+            <label for="color">Цвет:</label>
+<select id="color" name="color">
+    <option value="black">Черный</option>
+    <option value="white">Белый</option>
+    <option value="blue">Синий</option>
+    <!-- Добавьте другие цвета по аналогии -->
+</select>
 
-                В GAP представлены худи различных стилей и цветов¹². Некоторые модели худи GAP включают в себя двухслойную конструкцию и изготовлены из 100% хлопка⁴. 
-                
-                Пожалуйста, обратите внимание, что информация может варьироваться в зависимости от конкретной модели худи GAP. Для получения наиболее точной информации рекомендуется посетить официальный сайт GAP или магазин розничной торговли¹².
-               </p>
-            <button>Добавить в корзину</button>
+<label for="size">Размер:</label>
+<select id="size" name="size">
+    <option value="s">S</option>
+    <option value="m">M</option>
+    <option value="l">L</option>
+    <option value="xl">XL</option>
+    <!-- Добавьте другие размеры по аналогии -->
+</select>
+
+            <button onclick="addToCart()">Добавить в корзину</button>
         </div>
-        <!-- Добавьте больше продуктов по аналогии -->
     </div>
+  
+
+    <p id="noResultsMessage" style="display: none;">Таких товаров нету</p>
 </div>
 
-<!-- Скрипт для поиска товаров -->
-<script>
-document.getElementById('searchForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Предотвратить обновление страницы
-    var query = document.getElementById('searchInput').value; // Получить запрос пользователя
-    var products = document.getElementById('productList').children; // Получить список товаров
-    for (var i = 0; i < products.length; i++) {
-        var product = products[i];
-        var img = product.querySelector('img');
-        if (product.textContent.toLowerCase().includes(query.toLowerCase()) || img.alt.toLowerCase().includes(query.toLowerCase())) {
-            product.style.display = ''; // Показать товар, если он соответствует запросу
-        } else {
-            product.style.display = 'none'; // Скрыть товар, если он не соответствует запросу
-        }
-    }
-});
-</script>
+
+       
     </main>
     <footer>
         <div class="contact-info">
             <h3>Контакты</h3>
-            <p>Телефон: +996704080104</p>
+            <p><img src="https://th.bing.com/th/id/R.1919e7fc19654d575a86fbc3abf266dd?rik=oF3worBXYPNxIg&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Contact Icon" width="20" height="20"> Телефон: +996704080104</p>
         </div>
         <div class="social-media">
             <h3>Социальные сети</h3>
-            <p><a href="https://www.instagram.com/uniwardrobe.kg" target="_blank">Instagram: uniwardrobe.kg</a></p>
-            <p><a href="https://www.tiktok.com/@uniwardrobe.kg" target="_blank">TikTok: uniwardrobe.kg</a></p>
+            <p><img src="https://www.freepnglogos.com/uploads/instagram-logo-png/white-instagram-logo-png-transparent-background-1.png" alt="Instagram Icon" width="20" height="20"> <a href="https://www.instagram.com/uniwardrobe.kg" target="_blank">Instagram: uniwardrobe.kg</a></p>
+            <p><img src="https://th.bing.com/th/id/R.fcae442c955848858161ab5676642a00?rik=MosENanm5kvDgQ&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f62012ee14babde0004ca4177.png&ehk=AzW%2b309DHVANve3LFGliVmqsZH3B9H9aV%2fB64Fec%2baY%3d&risl=&pid=ImgRaw&r=0" width="20" height="20"> <a href="https://www.tiktok.com/@uniwardrobe.kg" target="_blank">TikTok: uniwardrobe.kg</a></p>
         </div>
     </footer>
+
+    <script src="main.js">
+    </script>
+    
 </body>
 </html>

@@ -274,3 +274,49 @@ footer {
 #searchForm button:hover {
     background-color: #45a049; /* Цвет при наведении */
 }
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50; /* Зеленоватый цвет в стиле "old money" */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Цвет при наведении */
+}
+
+/* Стиль кнопки в хедере */
+header button {
+    background-color: #8FBC8F; /* Светло-зеленоватый цвет */
+    color: #000; /* Черный текст */
+}
+
+header button:hover {
+    background-color: #98FB98; /* Цвет при наведении */
+}
+#about {
+    background-color: #006400; /* Темно-зеленый цвет фона */
+    padding: 20px;
+    border-radius: 35px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif; /* Классический шрифт */
+    box-shadow: 0 0 10px rgba(242, 255, 0, 0.5); /* Размытые края */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify; /* Выравнивание текста по ширине */
+    margin-bottom: 20px; /* Добавлен отступ снизу */
+}
