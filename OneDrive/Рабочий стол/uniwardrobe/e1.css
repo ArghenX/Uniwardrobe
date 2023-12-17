@@ -1,0 +1,131 @@
+/* Стили для галереи и изображений */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(110, 101, 101);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+
+main {
+    padding: 20px 0;
+}
+.gallery {
+    margin: 25px;
+    border: 1px solid #ccc;
+    float: left;
+   
+  }
+  
+  .gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 20px;
+    text-align: center;
+  }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    width: 300px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #092c08; /* Черный фон */
+    color: #FFFFFF; /* Белый текст */
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+footer h3 {
+    color: #FFFF00; /* Желтый цвет заголовков */
+}
+
+footer p {
+    margin: 0; /* Убрать отступы у абзацев */}
+    
+    header {
+        background-color: #000000; /* Черный фон */
+        text-align: center; /* Центрирование логотипа */
+        padding: 20px;
+    }
+    header {
+        background-color: #000000; /* Черный фон */
+        text-align: center; /* Центрирование логотипа */
+        padding: 20px;
+    }
+    
+    nav {
+        background-color: #000000; /* Черный фон */
+        text-align: center; /* Центрирование ссылок */
+        padding: 20px;
+    }
+    
+    nav a {
+        color: #FFFF00; /* Желтые ссылки */
+        margin: 0 10px; /* Отступы между ссылками */
+        text-decoration: none; /* Убрать подчеркивание */
+    }
+    
+    nav a:hover {
+        color: #FFFFFF; /* Белый цвет при наведении */
+    }
+    
+    #searchForm {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    #searchForm input[type="text"] {
+        width: 200px;
+        padding: 5px;
+    }
+    
+    #searchForm button {
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+    .product {display: flex; margin-bottom: 20px;}
+    .product img {width: 100px; height: 100px;}
+    .product-info {margin-left: 10px;}
+    .product button {background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;}
+    .product button:hover {background-color: #45a049;}
+    #total {font-weight: bold;}
+    #search {margin-bottom: 20px;}
